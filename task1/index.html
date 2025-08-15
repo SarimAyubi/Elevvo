@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Collapsible Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="logo-placeholder">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span>Sarim.</span>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><span class="icon">🏠</span><a href="#">Home</a></li>
+                <li><span class="icon">📊</span><a href="#">Dashboard</a></li>
+                <li><span class="icon">📋</span><a href="#">Reports</a></li>
+                <li><span class="icon">⚙️</span><a href="#">Settings</a></li>
+                <li><span class="icon">📞</span><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Collapse Button Always Floating -->
+    <button class="toggle-btn" id="toggleBtn">
+        <span class="btn-icon">☰</span>
+    </button>
+
+    <div class="main-content" id="mainContent">
+        <header>
+            <h1>Main Content</h1>
+            <p>Welcome to the main area, designed to complement the sidebar's modern aesthetic.</p>
+        </header>
+        <div class="content-grid">
+            <div class="card">
+                <h2>Section 1</h2>
+                <p>Placeholder content for section one.</p>
+            </div>
+            <div class="card">
+                <h2>Section 2</h2>
+                <p>Placeholder content for section two.</p>
+            </div>
+            <div class="card">
+                <h2>Section 3</h2>
+                <p>Placeholder content for section three.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
