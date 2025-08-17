@@ -1,0 +1,9 @@
+/* Minimal custom styles */
+    html, body {
+      height: 100%;
+    }
+
+    /* Ensure images in cards don't distort on very small screens */
+    img {
+      display: block;
+    }

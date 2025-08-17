@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My Personal Blog</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {}
+            }
+          }
+        </script>
+      </head>
+      <body class="bg-gray-50 text-gray-800 min-h-screen">
+        <header class="bg-white shadow">
+          <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h1 class="text-2xl font-semibold">Sarim Ayubi's Blog</h1>
+              <p class="text-sm text-gray-500">Thoughts on Tech, Travel & Food</p>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <div class="relative flex-1">
+                <input id="searchInput" type="search" placeholder="Search posts by title..."
+                  class="w-full border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300" />
+              </div>
+              <div>
+                <select id="pageSizeSelect"
+                  class="border border-gray-200 rounded-md px-3 py-2 text-sm focus:outline-none">
+                  <option value="6">6 per page</option>
+                  <option value="9">9 per page</option>
+                  <option value="12">12 per page</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="max-w-6xl mx-auto px-4 py-8">
+          <section class="mb-6">
+            <div class="flex flex-wrap items-center gap-3" id="categoryFilters">
+              <!-- category buttons inserted by JS -->
+            </div>
+          </section>
+
+          <section>
+            <div id="postsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- post cards inserted by JS -->
+            </div>
+
+            <div id="noResults" class="hidden mt-8 text-center text-gray-600">
+              No posts found.
+            </div>
+          </section>
+
+          <section class="mt-8">
+            <nav id="paginationControls" class="flex items-center justify-center gap-2 flex-wrap"></nav>
+          </section>
+        </main>
+
+        <footer class="mt-12 py-6 bg-white">
+          <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
+            © <span id="year"></span> Sarim Ayubi 
+          </div>
+        </footer>
+
+        <script type="module" src="script.js"></script>
+      </body>
+    </html>
